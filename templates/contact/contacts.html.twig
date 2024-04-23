@@ -3,16 +3,24 @@
 		<h2 class="section-title">Me<span>Contacter</span>
 		</h2>
 		<div class="form">
-		{{form_start(contactForm)}}
-		<div class="row justify-content-center">
-			<div class="col-lg-6 ">
-				{{form_row(contactForm.name)}}
+			{% for type, messages in app.flashes(['success'])%}
+				{% for message in messages %}
+					<div class=" alert alert-{{type}}">
+						{{message|join('. ')}}
+					</div>
+				{% endfor %}
+			{% endfor %}
+
+			{{form_start(contactForm)}}
+			<div class="row justify-content-center">
+				<div class="col-lg-6 ">
+					{{form_row(contactForm.name)}}
+				</div>
+				<div class="col-lg-6">
+					{{form_row(contactForm.firstName)}}
+				</div>
 			</div>
-			<div class="col-lg-6">
-			{{form_row(contactForm.firstName)}}
-			</div>
-		</div>
-		{{form_end(contactForm)}}
+			{{form_end(contactForm)}}
 		</div>
 	</div>
 </div></section>

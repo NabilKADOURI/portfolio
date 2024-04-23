@@ -28,7 +28,7 @@ class IndexController extends AbstractController
             $em->persist($contact);
             $em->flush();
 
-            $this->addFlash('success', 'Votre demande à bien été prise en compte');
+            $this->addFlash('success', 'Votre demande à bien été prise en compte !');
             return $this->redirectToRoute('home');
         }
 
