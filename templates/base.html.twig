@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}
+				Portfolio
+			{% endblock %}
+		</title>
+
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+
+
+		{% block stylesheets %}
+		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		{% endblock %}
+
+		{% block javascripts %}
+			{% block importmap %}
+				{{ importmap('app')}}
+			{% endblock %}
+		{% endblock %}
+	</head>
+	<body>
+		{% block header %}
+			{{include('navBar.html.twig')}}
+		{% endblock %}
+
+		{% block main %}
+		{{include('index/hero.html.twig')}}
+		{{include('index/about.html.twig')}}
+		{{include('index/experiences.html.twig')}}
+		{{include('index/softSkills.html.twig')}}
+		{{include('index/hardSkills.html.twig')}}
+		{{include('index/projectsList.html.twig')}}
+		{{include('contact/contacts.html.twig')}}
+		{% endblock %}
+
+		{% block footer %}
+			{{include('index/footer.html.twig')}}
+		{% endblock %}
+
+
+		<script src="https://unpkg.com/scrollreveal"></script>
+		<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+		<script>AOS.init()</script>
+	</body>
+</html>

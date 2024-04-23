@@ -1,0 +1,550 @@
+/* css globale */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins" sans-serif;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bleu: #00abe4;
+  --bg: rgb(2, 2, 2);
+  --bg2: #0a0909;
+  --light: #e9f1fa;
+  --link: #034663;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+section,
+footer {
+  background: var(--bg);
+  color: var(--light);
+  position: relative;
+}
+
+section {
+  padding: 10rem 7% 2rem;
+  min-height: 60vh;
+}
+
+span {
+  color: var(--bleu);
+}
+
+/* css nav */
+nav {
+  background: var(--bg);
+  width: 100%;
+  height: 120px;
+  padding: 2rem;
+}
+
+.navigation a {
+  font-size: 1.5rem;
+  color: var(--bleu);
+  margin-left: 2rem;
+  transition: 2s ease-in-out;
+  position: relative;
+}
+
+.navigation a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 0%;
+  height: 1px;
+  background: var(--light);
+  transition: width.2s ease-in-out;
+}
+
+.navigation a:hover.navigation a.active {
+  color: var(--light);
+}
+
+.navigation a:hover::before,
+.navigation {
+  width: 100%;
+}
+
+/* css section hero */
+
+/* animation image hero */
+
+.hero-img {
+  width: 35vw;
+  max-width: 100%;
+  animation: animimg 4s ease-in-out infinite;
+}
+
+@keyframes animimg {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-2.4rem);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+/* contenu texte hero */
+
+.hero-content h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.hero-content h3:nth-of-type(2) {
+  margin-top: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.hero-content p {
+  font-size: 1.6rem;
+}
+
+/* texte animé hero */
+
+#typing-text::after {
+  content: "en formation";
+  font-size: 3.2rem;
+  animation: change-text 7s infinite;
+}
+
+@keyframes change-text {
+  from {
+    content: "actuellement";
+  }
+  25% {
+    content: "en formation";
+  }
+  50% {
+    content: "de développeur web";
+  }
+  75% {
+    content: "et web mobile";
+  }
+  to {
+    content: "à Human Booster";
+  }
+}
+
+/* anim logo social hero */
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  color: var(--bleu);
+  border-radius: 50%;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: backgriund 2s ease-in-out;
+}
+
+.social-media a:hover {
+  background: var(--bleu);
+  box-shadow: 0 0 1rem var(--bleu);
+  color: var(--light);
+}
+
+/* css section about */
+
+.about {
+  background: var(--bg2);
+}
+/* vidéo */
+
+iframe {
+  width: 35vw;
+  height: 45vh;
+  border: solid #00abe4 5px;
+  border-radius: 20px;
+}
+
+/* texte a propos + bouton */
+
+.about-title {
+  font-size: 4.5rem;
+}
+
+.about-content h3 {
+  font-size: 2.6rem;
+}
+
+.about-content p {
+  font-size: 1.6rem;
+  text-align: justify;
+  margin: 2rem 0.3rem;
+}
+
+.btn {
+  display: inline-block;
+  border: 2px solid var(--bleu);
+  border-radius: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem 2.8rem;
+  color: var(--bleu);
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+  background: var(--bleu);
+  box-shadow: 0 0 1rem var(--bleu);
+  color: var(--light);
+}
+
+/* css section expérience */
+.section-title {
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+.experience-box{
+    flex: 1 1 30rem;
+    background: var(--bg2);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    border: 0.5rem solid var(--bg);
+    transition: 1s ease-in-out;
+}
+
+.experience-box:hover{
+    border-color: var(--bleu);
+    transform: scale(1.02);
+}
+.experience-box i{
+color: var(--bleu);
+font-size: 7rem;
+}
+.experience-box h3{
+    font-size: 2.6rem;
+}
+
+.experience-box h4{
+    font-size: 1.6rem;
+}
+
+
+
+/* css section portfolio */
+
+.portfolio {
+  background: var(--bg2);
+}
+
+.portfolio h2{
+  margin-bottom: 4rem;
+}
+
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2rem;
+}
+
+.portfolio-box  {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  display: flex;
+  width: 35rem;
+}
+
+.portfolio-box img {
+  width: 100%;
+  transition: transform .2s ease-in-out;
+}
+.portfolio-box:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,1), var(--bleu));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 4rem;
+  transform: translateY(100%);
+  transition: transform 0.2s ease-in-out;
+}
+
+.portfolio-box:hover .portfolio-layer  {
+  transform: translateY(0%)
+}
+
+.portfolio-layer  h4 {
+  font-size: 3rem;
+ 
+}
+
+.portfolio-layer  p {
+  font-size: 1.6rem;
+  margin: 3rem 0 1rem;
+ 
+}
+
+.portfolio-layer  a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background: var(--bleu);
+  border-radius: 50%;
+}
+.portfolio-layer  a  i {
+  font-size: 2rem;
+  color: var(--bg2);
+}
+
+/* css contact */
+
+.contact h2 {
+  margin-bottom: 3rem;
+}
+
+.contact form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact form  .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form  .input-box  input,
+.contact form    textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--bleu);
+  background: var(--light);
+  border-radius: .8rem;
+  margin: 0.7rem 0;
+}
+
+.contact form  .input-box  input {
+  width: 49%;
+}
+
+.contact form    textarea {
+  resize: none;
+}
+form input[type="submit"]{
+  background: none;
+  .contact h2 {
+    margin-bottom: 3rem;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form  .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form  .input-box  input,
+.contact form    textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--light);
+    background: var(--bg2);
+    border-radius: .8rem;
+    margin: 0.7rem 0;
+}
+
+.contact form  .input-box  input {
+    width: 50%;
+}
+
+.contact form    textarea {
+    resize: none;
+}
+form input[type="submit"]{
+    background: none;
+    cursor: pointer
+}
+}
+
+/* css section hardskills */
+.hardskills i{
+  color: var(--bleu);
+  font-size: 7rem;
+  }
+
+  .slider {
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    padding: 50px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 100%; }
+    
+    .slide-track {
+    display: inline-block;
+    animation: carrousel 20s infinite linear;
+    }
+    
+    .slide {
+        margin: 0 60px;
+        width: 80px;
+        height: 80px;
+    }
+    @keyframes carrousel{
+        from {transform: translateX(0%);}
+        to {transform: translateX(-100%);}
+    }
+    
+
+
+
+
+/* média query */
+
+@media (max-width: 1200px){
+  html {
+      font-size: 55%;
+  }
+}
+@media (max-width: 991px){
+  header {
+      padding: 2rem 3%;
+  }
+  section {
+      padding: 10rem 3% 2rem;
+  }
+  .services {
+      padding-bottom: 7rem;
+  }
+  .portfolio {
+      padding-bottom: 7rem;
+  }
+  .portfolio-container {
+      grid-template-columns: repeat(2,1fr);
+  }
+  .contact {
+      min-height: auto;
+  }
+  footer {
+      padding: 2rem 3%;
+  }
+
+}
+
+
+@media (max-width: 768px){
+  #menu-burger{
+      display: block;
+  }
+  .navigation{
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 1rem 3%;
+      background: var(--bg);
+      border-top: .1rem solid rgba(0,0,0,.2);
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+      display: none;
+  }
+
+  .navigation a {
+      display: block;
+      font-size: 2rem;
+      margin: 3rem 0;
+  }
+
+  .navigation.active {
+      display: block;
+  }
+
+  .navigation a::before {
+      display: none;
+  }
+  .home {
+      flex-direction: column;
+  }
+
+  .home-content h3{
+      font-size: 2.6rem;
+  }
+  .home-content h1{
+      font-size: 5rem;
+  }
+  .home-img img{
+      width: 70vw;
+      margin-top: 4rem;
+  }
+  .about {
+      flex-direction: column-reverse;
+  }
+
+  .about img {
+      width: 70vw;
+      margin-top: 4rem;
+  }
+
+  .services h2 {
+      margin-bottom: 3rem;
+  }
+  .portfolio {
+      margin-bottom: 3rem;
+  }
+
+  .portfolio-container {
+      grid-template-columns: 1fr;
+  }
+
+
+}
+
+
+@media (max-width: 450px){
+  html {
+      font-size: 50%
+  }
+  .contact form  .input-box  input {
+      width: 100%;
+  }
+}
+@media (max-width: 365px){
+  .home-img img, .about img {
+      width: 90vw;
+      max-width: 100%;
+  }
+}

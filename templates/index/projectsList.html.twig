@@ -1,0 +1,20 @@
+<section class="portfolio" id="portfolio">
+	<div class="container">
+		<h2 class="section-title mb-5">Mes
+			<span>projets</span>
+		</h2>
+		<div class="portfolio-container">
+			{% for project in projects %}
+				<div class=" mb-5 portfolio-box col-lg-3 ">
+					<img src={{project.picture}} alt="projet danse">
+					<div class="portfolio-layer">
+						<h4>{{project.title}}</h4>
+						<a href='{{path('app_project', {id:project.id})}}'>
+							<i class='bx bx-link-external'></i>
+						</a>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
