@@ -27,6 +27,9 @@ class IndexController extends AbstractController
             $contact->setDate(new \DateTime());
             $em->persist($contact);
             $em->flush();
+
+            $this->addFlash('success', 'Votre demande à bien été prise en compte');
+            return $this->redirectToRoute('home');
         }
 
         return $this->render('index/index.html.twig', [

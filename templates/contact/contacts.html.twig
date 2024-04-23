@@ -1,16 +1,18 @@
-{% block main %}
-	
 <section class="contact" id="contact">
 	<div class="container">
-		<div class="row justify-content-center ">
-			<div class="col-lg-5 col-md-12 ">
-			<h2 class="section-title">Me
-						<span>Contacter</span>
-					</h2>
-				<div class=" mb-4">
-					{{form(contactForm)}}
-				</div>
+		<h2 class="section-title">Me<span>Contacter</span>
+		</h2>
+		<div class="form">
+		{{form_start(contactForm)}}
+		<div class="row justify-content-center">
+			<div class="col-lg-6 ">
+				{{form_row(contactForm.name)}}
+			</div>
+			<div class="col-lg-6">
+			{{form_row(contactForm.firstName)}}
 			</div>
 		</div>
-	</section>
-	{% endblock %}
+		{{form_end(contactForm)}}
+		</div>
+	</div>
+</div></section>
