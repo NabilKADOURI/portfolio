@@ -30,7 +30,7 @@ class IndexController extends AbstractController
             $em->persist($contact);
             $em->flush();
 
-           $contactService->sendConfirmation($contact);
+            $contactService->sendConfirmation($contact);
 
             $this->addFlash('success', 'Votre demande à bien été prise en compte !');
             return $this->redirectToRoute('home');

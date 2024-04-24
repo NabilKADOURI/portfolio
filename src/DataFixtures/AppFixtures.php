@@ -19,12 +19,12 @@ class AppFixtures extends Fixture
         ],
         ['title' => 'Dev Agency',
          'description' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dicta, hic tenetur ad dolores officiis est architecto nihil veniam reiciendis veritatis, maiores obcaecati pariatur possimus distinctio in at rerum quidem facere consequatur exercitationem rem ut? Atque culpa ipsam accusantium eaque ab vitae illo tempore alias et voluptatibus impedit, nemo odio?Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dicta, hic tenetur ad dolores officiis est architecto nihil veniam reiciendis veritatis, maiores obcaecati pariatur possimus distinctio in at rerum quidem facere consequatur exercitationem rem ut? Atque culpa ipsam accusantium eaque ab vitae illo tempore alias et voluptatibus impedit, nemo odio?Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dicta, hic tenetur ad dolores officiis est architecto nihil veniam reiciendis veritatis, maiores obcaecati pariatur possimus distinctio in at rerum quidem facere consequatur exercitationem rem ut? Atque culpa ipsam accusantium eaque ab vitae illo tempore alias et voluptatibus impedit, nemo odio?",
-         'picture' => "/uploads/lamarlonance.PNG",
+         'picture' => "/uploads/dev-agency.PNG",
          'link' => "https://github.com/NabilKADOURI"
         ],
         ['title' => 'Clean Dressing',
          'description' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dicta, hic tenetur ad dolores officiis est architecto nihil veniam reiciendis veritatis, maiores obcaecati pariatur possimus distinctio in at rerum quidem facere consequatur exercitationem rem ut? Atque culpa ipsam accusantium eaque ab vitae illo tempore alias et voluptatibus impedit, nemo odio?Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dicta, hic tenetur ad dolores officiis est architecto nihil veniam reiciendis veritatis, maiores obcaecati pariatur possimus distinctio in at rerum quidem facere consequatur exercitationem rem ut? Atque culpa ipsam accusantium eaque ab vitae illo tempore alias et voluptatibus impedit, nemo odio?Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dicta, hic tenetur ad dolores officiis est architecto nihil veniam reiciendis veritatis, maiores obcaecati pariatur possimus distinctio in at rerum quidem facere consequatur exercitationem rem ut? Atque culpa ipsam accusantium eaque ab vitae illo tempore alias et voluptatibus impedit, nemo odio?",
-         'picture' => "/uploads/lamarlonance.PNG",
+         'picture' => "/uploads/Clean-dressing.PNG",
          'link' => "https://github.com/NabilKADOURI"
         ],
     ];
