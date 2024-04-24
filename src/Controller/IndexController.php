@@ -17,7 +17,7 @@ use Symfony\Component\Routing\Attribute\Route;
 class IndexController extends AbstractController
 {
     #[Route('/', name: 'home')]
-    public function list(ProjectRepository $projectRepository, Request $request, EntityManagerInterface $em, ContactService $contactEmail): Response
+    public function list(ProjectRepository $projectRepository, Request $request, EntityManagerInterface $em, ContactService $contactService): Response
     {
         $projects = $projectRepository->findAll();
 
@@ -30,7 +30,7 @@ class IndexController extends AbstractController
             $em->persist($contact);
             $em->flush();
 
-           $contactEmail->sendConfirmation($contact);
+           $contactService->sendConfirmation($contact);
 
             $this->addFlash('success', 'Votre demande à bien été prise en compte !');
             return $this->redirectToRoute('home');
