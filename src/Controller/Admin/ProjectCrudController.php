@@ -28,5 +28,4 @@ class ProjectCrudController extends AbstractCrudController
             UrlField::new('link'),
         ];
     }
-   
 }
