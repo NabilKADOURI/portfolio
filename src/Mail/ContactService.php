@@ -9,10 +9,7 @@ use Symfony\Component\Mime\Email;
 class  ContactService
 {
 
-    public function __construct (
-
-        private MailerInterface $mailer
-    ){
+    public function __construct (private MailerInterface $mailer, private string $adminEmail){
         
     }
 
@@ -22,7 +19,7 @@ class  ContactService
 
         $email = (new Email())
 
-        ->from('mailtrap@localhost')
+        ->from($this->adminEmail)
         ->to($Contact->getEmail())
         ->subject("Demande prise en compte")
         ->html("<p>Votre demande a été prise en compte</p>");
