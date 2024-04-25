@@ -6,7 +6,7 @@
 		<div class="portfolio-container">
 			{% for project in projects %}
 				<div class=" mb-5 portfolio-box col-lg-3 ">
-					<img src={{project.picture}} alt="projet danse">
+					<img src="uploads/{{project.picture}}" alt="{{project.title}}">
 					<div class="portfolio-layer">
 						<h4>{{project.title}}</h4>
 						<a href='{{path('app_project', {id:project.id})}}'>

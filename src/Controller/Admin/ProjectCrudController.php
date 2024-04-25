@@ -21,11 +21,15 @@ class ProjectCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id')->hideOnForm()->hideWhenCreating(),
+            IdField::new('id')->hideWhenUpdating()->hideWhenCreating(),
             TextField::new('title'),
             TextEditorField::new('description'),
-            ImageField::new('picture')->setUploadDir('public/uploads/'),
+            ImageField::new('picture')
+            ->setBasePath('uploads/')
+            ->setUploadDir('public/uploads/')
+            ->setUploadedFileNamePattern('[slug]-[timestamp].[extension]'),
             UrlField::new('link'),
         ];
     }
 }
+
