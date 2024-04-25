@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Contact;
+use App\Entity\Experience;
 use App\Entity\Project;
 use App\Form\ContactType;
 use App\Mail\ContactService;
@@ -48,6 +49,14 @@ class IndexController extends AbstractController
     {
         return $this->render('projects/projectSingle.html.twig', [
             'project' => $project
+        ]);
+    }
+
+    #[Route('/experience/{id}', name: 'app_experience')]
+    public function experience(Experience $experience): Response
+    {
+        return $this->render('projects/projectSingle.html.twig', [
+            'experience' => $experience
         ]);
     }
 }

@@ -44,6 +44,9 @@ class Contact
 
     private ?\DateTimeInterface $date = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $object = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -117,6 +120,18 @@ class Contact
     public function setDate(\DateTimeInterface $date): static
     {
         $this->date = $date;
+
+        return $this;
+    }
+
+    public function getObject(): ?string
+    {
+        return $this->object;
+    }
+
+    public function setObject(string $object): static
+    {
+        $this->object = $object;
 
         return $this;
     }

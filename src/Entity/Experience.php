@@ -17,14 +17,23 @@ class Experience
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $dateStart = null;
-
-    #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
-    private ?\DateTimeInterface $dateEnd = null;
-
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
+
+    
+   
+
+    #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
+    private ?\DateTimeInterface $endYear = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $job = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $additionalInformation = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $picture = null;
 
     public function getId(): ?int
     {
@@ -43,30 +52,6 @@ class Experience
         return $this;
     }
 
-    public function getDateStart(): ?\DateTimeInterface
-    {
-        return $this->dateStart;
-    }
-
-    public function setDateStart(\DateTimeInterface $dateStart): static
-    {
-        $this->dateStart = $dateStart;
-
-        return $this;
-    }
-
-    public function getDateEnd(): ?\DateTimeInterface
-    {
-        return $this->dateEnd;
-    }
-
-    public function setDateEnd(?\DateTimeInterface $dateEnd): static
-    {
-        $this->dateEnd = $dateEnd;
-
-        return $this;
-    }
-
     public function getDescription(): ?string
     {
         return $this->description;
@@ -75,6 +60,58 @@ class Experience
     public function setDescription(string $description): static
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    
+
+   
+
+    public function getEndYear(): ?\DateTimeInterface
+    {
+        return $this->endYear;
+    }
+
+    public function setEndYear(?\DateTimeInterface $endYear): static
+    {
+        $this->endYear = $endYear;
+
+        return $this;
+    }
+
+    public function getJob(): ?string
+    {
+        return $this->job;
+    }
+
+    public function setJob(string $job): static
+    {
+        $this->job = $job;
+
+        return $this;
+    }
+
+    public function getAdditionalInformation(): ?string
+    {
+        return $this->additionalInformation;
+    }
+
+    public function setAdditionalInformation(?string $additionalInformation): static
+    {
+        $this->additionalInformation = $additionalInformation;
+
+        return $this;
+    }
+
+    public function getPicture(): ?string
+    {
+        return $this->picture;
+    }
+
+    public function setPicture(?string $picture): static
+    {
+        $this->picture = $picture;
 
         return $this;
     }
