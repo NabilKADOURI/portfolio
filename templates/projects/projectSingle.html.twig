@@ -3,6 +3,7 @@
 {% block main %}
 <section>
   <div class="container">
+  <a href="{{path('home')}}" class="btn" >Retour</a>
     <h1 class="section-title mb-5">{{ project.title }}</h1>
     <div class="row">
       <div class="col-lg-6">
@@ -11,7 +12,7 @@
         
       <div class="col-lg-6 about-content">
         <p>{{project.description}}</p>
-        <a class="btn" href={{project.link}}> En savoir plus</a>
+        <a class="btn" href={{project.link}}> Lien Github</a>
 
       </div>
     </div>

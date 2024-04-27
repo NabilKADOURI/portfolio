@@ -7,6 +7,7 @@ use App\Entity\Experience;
 use App\Entity\Project;
 use App\Form\ContactType;
 use App\Mail\ContactService;
+use App\Repository\ExperienceRepository;
 use App\Repository\ProjectRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -18,9 +19,10 @@ use Symfony\Component\Routing\Attribute\Route;
 class IndexController extends AbstractController
 {
     #[Route('/', name: 'home')]
-    public function list(ProjectRepository $projectRepository, Request $request, EntityManagerInterface $em, ContactService $contactService): Response
+    public function list(ProjectRepository $projectRepository,ExperienceRepository $experienceRepository, Request $request, EntityManagerInterface $em, ContactService $contactService,): Response
     {
         $projects = $projectRepository->findAll();
+        $experiences = $experienceRepository->findAll();
 
         $contact = new Contact();
         $form = $this->createForm(ContactType::class, $contact);
@@ -40,6 +42,7 @@ class IndexController extends AbstractController
         return $this->render('index/index.html.twig', [
             'projects' => $projects,
             'contactForm' => $form,
+            'experiences' => $experiences,
         ]);
     }
 
@@ -55,7 +58,7 @@ class IndexController extends AbstractController
     #[Route('/experience/{id}', name: 'app_experience')]
     public function experience(Experience $experience): Response
     {
-        return $this->render('projects/projectSingle.html.twig', [
+        return $this->render('experience/experienceSingle.html.twig', [
             'experience' => $experience
         ]);
     }

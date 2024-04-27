@@ -2,12 +2,12 @@
 
 namespace App\DataFixtures;
 
-use App\Entity\Experience;
+
 use App\Entity\Project;
-use DateTime;
+
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
-use Symfony\Component\Validator\Constraints\Date;
+
 
 class AppFixtures extends Fixture
 {
@@ -50,6 +50,8 @@ class AppFixtures extends Fixture
 
             $manager->persist($project);
         }
+
+        $manager->flush();
 
 
       
