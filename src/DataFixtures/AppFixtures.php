@@ -4,14 +4,18 @@ namespace App\DataFixtures;
 
 
 use App\Entity\Project;
-
+use App\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 
 class AppFixtures extends Fixture
 {
 
+    public function __construct(private UserPasswordHasherInterface $hasher)
+    {
+    }
 
     public const PROJECTS = [
         [
@@ -50,6 +54,19 @@ class AppFixtures extends Fixture
 
             $manager->persist($project);
         }
+        
+        {
+            $adminUser = new User();
+
+            $adminUser
+            ->setUsername('test')
+            ->setRoles(['ROLE_ADMIN'])
+            ->setPassword($this->hasher->hashPassword($adminUser, 'test'));
+
+            $manager->persist($adminUser);
+        }
+
+
 
         $manager->flush();
 
