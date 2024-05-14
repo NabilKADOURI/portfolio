@@ -1,25 +1,30 @@
-{% extends "base.html.twig" %}
+{{include('head.html.twig')}}
 
 {% block main %}
-<section>
-  <div class="container">
-  <a href="{{path('home')}}" class="btn" >Retour</a>
-    <h1 class="section-title mb-5">{{ project.title }}</h1>
-    <div class="row">
-      <div class="col-lg-6">
-        <img src="../uploads/{{project.picture}}" alt={{project.title}}>
-      </div>
-        
-      <div class="col-lg-6 about-content">
-        <p>{{project.description}}</p>
-        <a class="btn" href={{project.link}}> Lien Github</a>
+	<section>
+		<div class="container">
+			<a href="{{path('home')}}" class="btn">Retour</a>
+			<h1 class="section-title mb-5">{{ project.title }}</h1>
+			<div class="row">
 
-      </div>
-    </div>
-  </div>
-</section>
+				<div class= "">
+					<div >
+						<img src="../uploads/{{project.picture}}" alt={{project.title}}>
+					</div>
+					<div>
+					{% for icon in project.technology %}
+						<i class='{{icon.picture}}'></i>
+					{% endfor %}
+						
+					</div>
+				</div>
+
+				<div class="col-lg-6 about-content">
+					<p>{{project.description}}</p>
+					<a class="btn" href={{project.link}}>
+						Lien Github</a>
+				</div>
+			</div>
+		</div>
+	</section>
 {% endblock %}
-  
-  
-  
-

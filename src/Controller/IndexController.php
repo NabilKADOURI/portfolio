@@ -21,8 +21,8 @@ class IndexController extends AbstractController
     #[Route('/', name: 'home')]
     public function list(ProjectRepository $projectRepository,ExperienceRepository $experienceRepository, Request $request, EntityManagerInterface $em, ContactService $contactService,): Response
     {
-        $projects = $projectRepository->findAll();
-        $experiences = $experienceRepository->findAll();
+        // $projects = $projectRepository->findAll();
+        // $experiences = $experienceRepository->findAll();
 
         $contact = new Contact();
         $form = $this->createForm(ContactType::class, $contact);
@@ -40,9 +40,9 @@ class IndexController extends AbstractController
         }
 
         return $this->render('index/index.html.twig', [
-            'projects' => $projects,
+            'projects' => $projectRepository->findAll(),
             'contactForm' => $form,
-            'experiences' => $experiences,
+            'experiences' => $experienceRepository->findAll(),
         ]);
     }
 

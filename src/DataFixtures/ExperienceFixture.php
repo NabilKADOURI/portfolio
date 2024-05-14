@@ -17,9 +17,8 @@ class ExperienceFixture extends Fixture
             'end_year' =>  "2010-03-01",
             'job' => "Conseiller financier",
             'description' => "Commercialisation de solutions financières : revolving, crédit conso, auto, travaux, Déterminer la faisabilité du projet et sa cohérence, Assurer la logistique complète d'un dossier, y compris son suivi et contrôle, Ventes de produits et services additionnelles.",
-            
             "additional_information" =>"Meilleur conseiller espoir 2008",
-            "picture" => "",
+            "picture" => "logo-banque-casino.png",
             "icon" => "bx bxs-bank bx-tada-hover",
         ],
 
@@ -32,8 +31,8 @@ class ExperienceFixture extends Fixture
                             "Commercialisation d'espaces publicitaire, Mise à jour, analyse, identification et propositions de solutions, Constitution des dossiers de ventes et assurer leurs suivi administratif.
                             ",
             "additional_information" =>"Gestion d'un portefeuille client de plus de 500 clients",
-            "picture" => "",
-            "icon" => "bx bxs-bank bx-tada-hover",
+            "picture" => "logo-pages-jaunes.png",
+            "icon" => "bx bxs-book-content bx-tada-hover ",
         ],
 
         [
@@ -42,9 +41,9 @@ class ExperienceFixture extends Fixture
             'end_year' => "2023-04-01",
             'job' => "Chargé d'événements festifs et/ou sportifs",
             'description' => "Gestion administratif, financière et logistique de l'événement, Coordination des équipes internes et externes, Développement du partenariat (préstataires ,Mairie, MJC, LMH, CUCS), Responsable centre de loisirs Conduite de projet transversale avec les autres secteurs,Recrutement, accompagnement, coordination de l'équipe d'animation,Gestion administrative et financière complète.",
-            "additional_information" => "lorem",
-            "picture" => "",
-            "icon" => "bx bxs-bank bx-tada-hover",
+            "additional_information" => "",
+            "picture" => "logo-graine-de-vie.jpg",
+            "icon" => "bx bxs-party bx-tada-hover",
         ],
 
         [
@@ -53,9 +52,9 @@ class ExperienceFixture extends Fixture
                'end_year' => "2024-10-01",
             'job' => "Formation de développeur Web",
             'description' => "Conception et réalisation d'interfaces utilisateur,Mise en place de bases de donée relationnelles,Développement de composants PHP / symphony,Communicaton (méthode SCRUM).",
-            "additional_information" =>"lorem",
-            "picture" => "",
-            "icon" => "bx bxs-bank bx-tada-hover",
+            "additional_information" =>"",
+            "picture" => "logo-human-booster.jpg",
+            "icon" => "bx bx-code bx-tada-hover",
         ],
 
     ];

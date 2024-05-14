@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Repository\ExperienceRepository;
 use DateTimeInterface;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -39,6 +41,17 @@ class Experience
 
     #[ORM\Column(length: 255)]
     private ?string $icon = null;
+
+    /**
+     * @var Collection<int, Technology>
+     */
+    #[ORM\ManyToMany(targetEntity: Technology::class, inversedBy: 'experiences')]
+    private Collection $technology;
+
+    public function __construct()
+    {
+        $this->technology = new ArrayCollection();
+    }
 
    
 
@@ -139,6 +152,30 @@ class Experience
     public function setIcon(string $icon): static
     {
         $this->icon = $icon;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Technology>
+     */
+    public function getTechnology(): Collection
+    {
+        return $this->technology;
+    }
+
+    public function addTechnology(Technology $technology): static
+    {
+        if (!$this->technology->contains($technology)) {
+            $this->technology->add($technology);
+        }
+
+        return $this;
+    }
+
+    public function removeTechnology(Technology $technology): static
+    {
+        $this->technology->removeElement($technology);
 
         return $this;
     }

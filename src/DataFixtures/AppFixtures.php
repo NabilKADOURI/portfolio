@@ -22,19 +22,22 @@ class AppFixtures extends Fixture
             'title' => 'Lamarlonance',
             'description' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dicta, hic tenetur ad dolores officiis est architecto nihil veniam reiciendis veritatis, maiores obcaecati pariatur possimus distinctio in at rerum quidem facere consequatur exercitationem rem ut? Atque culpa ipsam accusantium eaque ab vitae illo tempore alias et voluptatibus impedit, nemo odio?Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dicta, hic tenetur ad dolores officiis est architecto nihil veniam reiciendis veritatis, maiores obcaecati pariatur possimus distinctio in at rerum quidem facere consequatur exercitationem rem ut? Atque culpa ipsam accusantium eaque ab vitae illo tempore alias et voluptatibus impedit, nemo odio?Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dicta, hic tenetur ad dolores officiis est architecto nihil veniam reiciendis veritatis, maiores obcaecati pariatur possimus distinctio in at rerum quidem facere consequatur exercitationem rem ut? Atque culpa ipsam accusantium eaque ab vitae illo tempore alias et voluptatibus impedit, nemo odio?",
             'picture' => "lamarlonance.png",
-            'link' => "https://github.com/NabilKADOURI"
+            
+            'link' => "https://github.com/NabilKADOURI/lamarlonance"
+
         ],
         [
             'title' => 'Dev Agency',
             'description' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dicta, hic tenetur ad dolores officiis est architecto nihil veniam reiciendis veritatis, maiores obcaecati pariatur possimus distinctio in at rerum quidem facere consequatur exercitationem rem ut? Atque culpa ipsam accusantium eaque ab vitae illo tempore alias et voluptatibus impedit, nemo odio?Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dicta, hic tenetur ad dolores officiis est architecto nihil veniam reiciendis veritatis, maiores obcaecati pariatur possimus distinctio in at rerum quidem facere consequatur exercitationem rem ut? Atque culpa ipsam accusantium eaque ab vitae illo tempore alias et voluptatibus impedit, nemo odio?Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dicta, hic tenetur ad dolores officiis est architecto nihil veniam reiciendis veritatis, maiores obcaecati pariatur possimus distinctio in at rerum quidem facere consequatur exercitationem rem ut? Atque culpa ipsam accusantium eaque ab vitae illo tempore alias et voluptatibus impedit, nemo odio?",
             'picture' => "dev-agency.PNG",
-            'link' => "https://github.com/NabilKADOURI"
+            
+            'link' => "https://github.com/Dev-AgencyHb/Projet-Co--"
         ],
         [
             'title' => 'Clean Dressing',
             'description' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dicta, hic tenetur ad dolores officiis est architecto nihil veniam reiciendis veritatis, maiores obcaecati pariatur possimus distinctio in at rerum quidem facere consequatur exercitationem rem ut? Atque culpa ipsam accusantium eaque ab vitae illo tempore alias et voluptatibus impedit, nemo odio?Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dicta, hic tenetur ad dolores officiis est architecto nihil veniam reiciendis veritatis, maiores obcaecati pariatur possimus distinctio in at rerum quidem facere consequatur exercitationem rem ut? Atque culpa ipsam accusantium eaque ab vitae illo tempore alias et voluptatibus impedit, nemo odio?Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dicta, hic tenetur ad dolores officiis est architecto nihil veniam reiciendis veritatis, maiores obcaecati pariatur possimus distinctio in at rerum quidem facere consequatur exercitationem rem ut? Atque culpa ipsam accusantium eaque ab vitae illo tempore alias et voluptatibus impedit, nemo odio?",
             'picture' => "Clean-dressing.png",
-            'link' => "https://github.com/NabilKADOURI"
+            'link' => "https://github.com/NabilKADOURI/BuisnessCase"
         ],
     ];
 
@@ -65,7 +68,6 @@ class AppFixtures extends Fixture
 
             $manager->persist($adminUser);
         }
-
 
 
         $manager->flush();

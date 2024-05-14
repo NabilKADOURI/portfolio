@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Project;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
@@ -27,7 +28,9 @@ class ProjectCrudController extends AbstractCrudController
             ImageField::new('picture')
             ->setBasePath('uploads/')
             ->setUploadDir('public/uploads/')
-            ->setUploadedFileNamePattern('[slug]-[timestamp].[extension]'),
+            ->setUploadedFileNamePattern('[slug]-[timestamp].[extension]')
+            ->setRequired(false),
+            AssociationField::new("technology"),
             UrlField::new('link'),
         ];
     }

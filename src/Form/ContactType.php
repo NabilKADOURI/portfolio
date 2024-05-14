@@ -39,6 +39,11 @@ class ContactType extends AbstractType
                     "placeholder" => "Entrer votre numéro de téléphone"
                 ]
                 ])
+            ->add('object',TextType::class, [
+                "label" => "Objet", "attr" => [
+                    "placeholder" => "Indiquez l'objet de votre message"
+                ]
+                ])
             ->add('message',TextareaType::class,[
                 "label" => "Message", "attr" => [
                     "placeholder" => "Entrer votre message"
