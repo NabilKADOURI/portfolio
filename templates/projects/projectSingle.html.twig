@@ -7,19 +7,20 @@
 			<h1 class="section-title mb-5">{{ project.title }}</h1>
 			<div class="row">
 
-				<div class= "">
-					<div >
+				<div class="col-lg-6">
+					<div>
 						<img src="../uploads/{{project.picture}}" alt={{project.title}}>
 					</div>
 					<div>
-					{% for icon in project.technology %}
-						<i class='{{icon.picture}}'></i>
-					{% endfor %}
-						
+						{% for icon in project.technology %}
+							<i class='{{icon.picture}}'></i>
+						{% endfor %}
+
 					</div>
 				</div>
 
 				<div class="col-lg-6 about-content">
+					<h2>Description du projet</h2>
 					<p>{{project.description}}</p>
 					<a class="btn" href={{project.link}}>
 						Lien Github</a>
