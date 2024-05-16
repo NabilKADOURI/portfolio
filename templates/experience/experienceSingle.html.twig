@@ -1,34 +1,33 @@
 {{include('head.html.twig')}}
 
 <body>
-{% block main %}
-<section>
-  <div class="container">
-    <h1 class="section-title mb-5">{{ experience.name }}</h1>
-    <div class="row">
-      <div class="col-lg-6">
-        <h2>Metier : <br> {{ experience.job }}</h2> <br>
-        <h3>Période d'exercice : {{experience.startYear|date("Y")}}-{{experience.endYear|date("Y")}}</h3>
-        <img src="../uploads/{{experience.picture}}" alt={{experience.job}}>
-      </div>
-        
-      <div class="col-lg-6 about-content">
-      <h3>Description des missions :</h3>
-      <br>
-        <p>{{experience.description}}</p>
-        <br><br>
-        <h3>Informations complémentaires :</h3>
-        <br>
-        <p>{{experience.additionalInformation}}</p>
-        <br><br><br>
-        <a href="{{path('home')}}" class="btn" >Retour</a>
-      </div>
-      <div class="col-lg-12 about-content">
-      
-      </div>
-    </div>
-  </div>
-</section>
-{% endblock %}
+	{% block main %}
+		<section>
+			<div class="container single">
+				<h1 class=" mb-5">{{ experience.name }}</h1> <br> <br>
+				<div class="row ">
+					<div class="col-lg-6">
+						<h2 class= "ms-5">
+							{{experience.job }}</h2>
+						<img src="../uploads/{{experience.picture}}" alt="{{experience.job}}">
+					</div>
+
+					<div class="col-lg-6 ">
+						<h3>Description des missions :</h3><br>
+						<p>{{experience.description}}</p>
+						<br>
+						<h3>Informations complémentaires :</h3>
+						<p>{{experience.additionalInformation}}</p>
+						<br><br>
+
+						<h3>Période d'exercice :
+						</h3>
+						<p>{{experience.startYear|date("Y")}}-{{experience.endYear|date("Y")}}</p>
+						<a href="{{path('home')}}#experience" class="btn mt-5">Retour</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	{% endblock %}
 </body>
 </html>

@@ -19,20 +19,27 @@
 
 html {
   font-size: 62.5%;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 section,
 footer {
   background: var(--bg);
   color: var(--light);
-  position: relative;
+
 }
 
 section {
   padding: 10rem 7% 2rem;
   min-height: 60vh;
 }
+
+.section-title {
+  font-size: 4.5rem;
+  text-align: center;
+  margin: 30px 0px 30px 0px;
+}
+
 
 
 span {
@@ -43,7 +50,6 @@ span {
 nav {
   background: var(--bg);
   width: 100%;
-  height: 120px;
   padding: 2rem;
 }
 
@@ -51,30 +57,6 @@ nav {
   font-size: 1.5rem;
   color: var(--bleu);
   margin-left: 2rem;
-  transition: 2s ease-in-out;
-  position: relative;
-}
-
-.navigation a::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: block;
-  width: 0%;
-  height: 1px;
-  background: var(--light);
-  transition: width.2s ease-in-out;
-}
-
-.navigation a:hover.navigation a.active {
-  color: var(--light);
-}
-
-.navigation a:hover::before,
-.navigation {
-  width: 100%;
 }
 
 /* css section hero */
@@ -82,8 +64,6 @@ nav {
 /* animation image hero */
 
 .hero-img {
-  width: 35vw;
-  max-width: 100%;
   animation: animimg 4s ease-in-out infinite;
 }
 
@@ -175,14 +155,17 @@ nav {
 iframe {
   width: 35vw;
   height: 45vh;
-  border: solid #00abe4 5px;
-  border-radius: 20px;
+}
+
+@media screen {
+  
 }
 
 /* texte a propos + bouton */
 
 .about-title {
   font-size: 4.5rem;
+  margin: 30px 0px 30px 0px;
 }
 
 .about-content h3 {
@@ -213,10 +196,6 @@ iframe {
 }
 
 /* css section expérience */
-.section-title {
-  font-size: 4.5rem;
-  text-align: center;
-}
 
 .experience-box {
   flex: 1 1 30rem;
@@ -243,21 +222,16 @@ iframe {
   font-size: 1.6rem;
 }
 
-/* css section portfolio */
+/* css section project*/
 
 .portfolio {
   background: var(--bg2);
 }
 
 .portfolio h2 {
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
-.portfolio-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
 
 .portfolio-box {
   position: relative;
@@ -317,6 +291,38 @@ iframe {
 .portfolio-layer a i {
   font-size: 2rem;
   color: var(--bg2);
+}
+
+/*  css projectSingle et experienceSingle  */
+
+.single h1{color: var(--bleu);
+  font-size: 7rem;
+  text-align: center;
+}
+.single h2{
+  font-size: 3.2rem;
+  margin-bottom: 2rem ;
+}
+
+.single h3{
+  font-size: 2.4rem;
+  margin-bottom: 2rem ;
+}
+.single p{
+  font-size: 1.6rem;
+  margin-bottom: 2rem ;
+}
+
+.single i{color: var(--bleu);
+width: 5rem;
+height: 5rem;
+margin: 2rem;
+}
+
+.single img{
+  width: 25vw;
+  margin: 20px 0px 0px 50px;
+  
 }
 
 /* css contact */
@@ -432,118 +438,7 @@ form input[type="submit"] {
   }
 }
 
-/* média query */
-
-/* @media (max-width: 1200px) {
-  html {
-    font-size: 55%;
-  }
-} */
-@media (max-width: 991px) {
-  /* header {
-    padding: 2rem 3%;
-  }
-  section {
-    padding: 10rem 3% 2rem;
-  } */
-  /* .services {
-    padding-bottom: 7rem;
-  } */
-  .portfolio {
-    padding-bottom: 7rem;
-  }
-  .portfolio-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .contact {
-    min-height: auto;
-  }
-  footer {
-    padding: 2rem 3%;
-  }
-}
-
-@media (max-width: 768px) {
-  /* #menu-burger {
-    display: block;
-  } */
-  /* .navigation {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 1rem 3%;
-    background: var(--bg);
-    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    display: none;
-  }
-
-  .navigation a {
-    display: block;
-    font-size: 2rem;
-    margin: 3rem 0;
-  }
-
-  .navigation.active {
-    display: block;
-  }
-
-  .navigation a::before {
-    display: none;
-  } */
-  /* .home {
-    flex-direction: column;
-  }
-
-  .home-content h3 {
-    font-size: 2.6rem;
-  }
-  .home-content h1 {
-    font-size: 5rem;
-  }
-  .home-img img {
-    width: 70vw;
-    margin-top: 4rem;
-  } */
-  .about {
-    flex-direction: column-reverse;
-  }
-
-  .about img {
-    width: 70vw;
-    margin-top: 4rem;
-  }
-
-  .services h2 {
-    margin-bottom: 3rem;
-  }
-  .portfolio {
-    margin-bottom: 3rem;
-  }
-
-  .portfolio-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 450px) {
-  /* html {
-    font-size: 50%;
-  } */
-  .contact form .input-box input {
-    width: 100%;
-  }
-}
-@media (max-width: 365px) {
-  .home-img img,
-  .about img {
-    width: 90vw;
-    max-width: 100%;
-  }
-}
-
-/* css section contact */
+/* css section contact*/
 .form {
   color: var(--bleu);
   font-size: 2rem;
@@ -566,4 +461,3 @@ form input[type="submit"] {
 .form textarea {
   height: 20rem;
 }
-

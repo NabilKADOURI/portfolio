@@ -2,7 +2,7 @@
 	<div class="container">
 		<h2 class="section-title">Me<span>Contacter</span>
 		</h2>
-		<div class="form">
+		<div class="form" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
 			{% for type, messages in app.flashes(['success'])%}
 				{% for message in messages %}
 					<div class=" alert alert-{{type}}">
