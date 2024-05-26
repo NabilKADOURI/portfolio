@@ -101,7 +101,7 @@ Enfin je en utilisant la methode `render` dans le controleur , Symfony créer au
 
 Afin d'assurer un retour à l'utilisateur lui indiquant que sa demande a bien était prise en compte . J'ai utilisé les messages flash.
 
-## EasyAdmin 👨🏾‍💼
+## EasyAdmin
 
 Comme il s'agit d'un portfolio dans lequel je souhaite ajouter/modifier ou bien supprimer des éléments comme par exemple de nouveaux projets, de nouvelles expérience etc... J'ai intégré le Bundle d'administration `Easyadmin`. Grâce à la commande :
 
