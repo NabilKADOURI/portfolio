@@ -14,8 +14,10 @@
 
 					<div class="col-lg-6 ">
 						<h3>Description des missions :</h3><br>
-						<p>{{experience.description}}</p>
-						<br>
+						
+						<p>{{ experience.description | striptags | raw }}
+						<br></p>
+						
 						<h3>Informations complémentaires :</h3>
 						<p>{{experience.additionalInformation}}</p>
 						<br><br>

@@ -5,7 +5,7 @@
   padding: 0;
   font-family: "Poppins" sans-serif;
   text-decoration: none;
-  list-style: none;
+  /* list-style: none; */
   scroll-behavior: smooth;
 }
 
@@ -103,26 +103,27 @@ nav {
 /* texte animé hero */
 
 #typing-text::after {
-  content: "en formation";
+  content: "en reconversion";
   font-size: 3.2rem;
-  animation: change-text 7s infinite;
+  animation: change-text 7s linear 3s infinite ;
+ 
 }
 
 @keyframes change-text {
   from {
-    content: "actuellement";
+    content: "en reconversion";
   }
   25% {
     content: "en formation";
   }
   50% {
-    content: "de développeur web";
+    content: "développeur web";
   }
   75% {
-    content: "et web mobile";
+    content: "coach de football";
   }
   to {
-    content: "chez Human Booster";
+    content: "passionné";
   }
 }
 
@@ -409,11 +410,12 @@ form input[type="submit"] {
 .hardskills i {
   color: var(--bleu);
   font-size: 7rem;
+ 
 }
 
 .slider {
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-  padding: 50px 0;
+  padding: 100px 0;
   overflow: hidden;
   white-space: nowrap;
   height: 100%;

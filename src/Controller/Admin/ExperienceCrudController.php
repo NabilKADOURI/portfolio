@@ -8,6 +8,8 @@ use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
 class ExperienceCrudController extends AbstractCrudController
@@ -28,7 +30,7 @@ class ExperienceCrudController extends AbstractCrudController
             TextField::new('job'),
             DateTimeField::new('start_year'),
             DateTimeField::new('end_year'),
-            TextField::new('description'),
+            TextEditorField::new('description'),
             TextField::new('additional_information'),
             ImageField::new('picture')
             ->setBasePath('uploads/')

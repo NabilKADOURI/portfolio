@@ -6,7 +6,6 @@ use App\Repository\ContactRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as ASSERT;
-use Symfony\Bridge\Doctrine\Validator\Constraints;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 #[ORM\Entity(repositoryClass: ContactRepository::class)]
@@ -19,25 +18,25 @@ class Contact
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    #[ASSERT\NotBlank (message:"veuillez entrez un nom ")]
+    #[ASSERT\NotBlank(message: "veuillez entrez un nom ")]
     private ?string $name = null;
 
     #[ORM\Column(length: 255)]
-    #[ASSERT\NotBlank (message:"veuillez entrez un prénom ")]
+    #[ASSERT\NotBlank(message: "veuillez entrez un prénom ")]
     private ?string $firstName = null;
 
     #[ORM\Column(length: 255)]
-    #[ASSERT\NotBlank (message:"veuillez entrez un email ")]
-    #[Assert\Email (message:"Entrez un mail valide")]
+    #[ASSERT\NotBlank(message: "veuillez entrez un email ")]
+    #[Assert\Email(message: "Entrez un mail valide")]
     private ?string $email = null;
 
     #[ORM\Column]
-    #[ASSERT\NotBlank (message:"veuillez entrez un numéro de téléphone ")]
-   
+    #[ASSERT\NotBlank(message: "veuillez entrez un numéro de téléphone ")]
+
     private ?int $numberPhone = null;
 
     #[ORM\Column(type: Types::TEXT)]
-    #[ASSERT\NotBlank (message:"veuillez entrez un message")]
+    #[ASSERT\NotBlank(message: "veuillez entrez un message")]
     private ?string $message = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
