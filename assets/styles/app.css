@@ -18,7 +18,7 @@
 }
 
 html {
-  font-size: 62.5%;
+
   overflow-x: hidden;
 }
 
@@ -26,7 +26,6 @@ section,
 footer {
   background: var(--bg);
   color: var(--light);
-
 }
 
 section {
@@ -35,12 +34,14 @@ section {
 }
 
 .section-title {
-  font-size: 4.5rem;
+  font-size: 3rem;
   text-align: center;
-  margin: 30px 0px 30px 0px;
+
 }
 
-
+h2{
+  font-size: 2rem;
+}
 
 span {
   color: var(--bleu);
@@ -54,9 +55,9 @@ nav {
 }
 
 .navigation a {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: var(--bleu);
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 /* css section hero */
@@ -79,26 +80,6 @@ nav {
   }
 }
 
-/* contenu texte hero */
-
-.hero-content h3 {
-  font-size: 3.2rem;
-  font-weight: 700;
-}
-
-.hero-content h3:nth-of-type(2) {
-  margin-top: 2rem;
-}
-
-.hero-content h1 {
-  font-size: 5.6rem;
-  font-weight: 700;
-  line-height: 1.3;
-}
-
-.hero-content p {
-  font-size: 1.6rem;
-}
 
 /* texte animé hero */
 
@@ -132,8 +113,8 @@ nav {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 4rem;
-  height: 4rem;
+  width: 6rem;
+  height: 6rem;
   color: var(--bleu);
   border-radius: 50%;
   margin: 3rem 1.5rem 3rem 0;
@@ -142,7 +123,7 @@ nav {
 
 .social-media a:hover {
   background: var(--bleu);
-  box-shadow: 0 0 1rem var(--bleu);
+  box-shadow: 0 0 2rem var(--bleu);
   color: var(--light);
 }
 
@@ -153,30 +134,36 @@ nav {
 }
 /* vidéo */
 
-iframe {
-  width: 35vw;
-  height: 45vh;
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 60%; 
+  height: 0;
 }
-
-@media screen {
-  
+.video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* texte a propos + bouton */
 
 .about-title {
-  font-size: 4.5rem;
-  margin: 30px 0px 30px 0px;
+  font-size: 3rem;
+  margin: 2rem 0.8rem ;
 }
 
 .about-content h3 {
-  font-size: 2.6rem;
+  font-size: 1.5rem;
+  margin: 2rem 0.8rem ;
 }
 
 .about-content p {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   text-align: justify;
-  margin: 2rem 0.3rem;
+  margin: 2rem 0.8rem ;
 }
 
 .btn {
@@ -231,6 +218,7 @@ iframe {
 
 .portfolio h2 {
   margin-bottom: 5rem;
+  font-size: 3rem;
 }
 
 
@@ -294,14 +282,14 @@ iframe {
   color: var(--bg2);
 }
 
-/*  css projectSingle et experienceSingle  */
+/*  css project Single et experience Single  */
 
 .single h1{color: var(--bleu);
   font-size: 7rem;
   text-align: center;
 }
 .single h2{
-  font-size: 3.2rem;
+  font-size: 3rem;
   margin-bottom: 2rem ;
 }
 
@@ -330,6 +318,7 @@ margin: 2rem;
 
 .contact h2 {
   margin-bottom: 3rem;
+  font-size: 3rem;
 }
 
 .contact form {
@@ -412,6 +401,7 @@ form input[type="submit"] {
   font-size: 7rem;
  
 }
+
 
 .slider {
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
